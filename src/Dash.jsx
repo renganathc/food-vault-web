@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { logout, db } from './Firebase';
 import { Html5QrcodeScanner } from 'html5-qrcode';
-import { collection, addDoc, doc, getDoc, setDoc } from "firebase/firestore";
+import { doc, getDoc, setDoc } from "firebase/firestore";
 import "./dash.css"
 
 function Dash(props) {
