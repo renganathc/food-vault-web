@@ -56,6 +56,7 @@ function Dash(props) {
     const qrCodeScanner = new Html5QrcodeScanner("qr-reader", {fps: 10, qrbox: 250, facingMode: "environment", showTorchButton: false, showScanButton: false }, false);
 
     qrCodeScanner.render(
+      { facingMode: "environment" },
       (result) => {
         console.log(result);
         if(result == "kamadhenu-1") {
