@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+#html5-qrcode-button-camera-stop{
+    visibility: hidden;
+    display: none;
+}
+
+#html5-qrcode-anchor-scan-type-change {
+    visibility: hidden;
+    display: none;
+}
+
+body {
+    display: flex;
+    font-family: 'Poppins', 'Courier New', Courier, monospace;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: scroll;
+}
+
+.login {
+    padding: 10px;
+    font-size: 18px;
+    color: white;
+    font-weight: 550;
+    background: orange;
+    border-width: 0;
+    border-radius: 7px;
+    box-shadow: 0 0 4px rgb(161, 161, 161);
+}
+
+.token-body {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(94, 199, 240);
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.token-card {
+    height: calc(100vh - 90px);
+    width: calc(100vw - 90px);
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 0 7px rgb(124, 124, 124);
+}
+
+  
+  .token-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .green-tick {
+    width: 300px;
+    height: 300px;
+    padding-bottom: 40px;
+  }
+  
+  .token-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .token-info p {
+    text-align: center;
+    margin: 2px 0;
+  }
+  
+  .generated-label,
+  .token-id-label,
+  .expiry-text {
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+  }
+  
+  .generated-text,
+  .token-id-text {
+    font-size: 22px;
+    color: black;
+    margin-bottom: 25px;
+  }
+  
+  .expiry-text {
+    font-size: 16px;
+    color: #DE1111;
+  }
+  
