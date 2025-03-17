@@ -36,7 +36,7 @@ function Dash(props) {
               setStatus("Claimed token at " + time + " " + date);
               setTimeout(() => {
                 setToken_vis(false);
-              }, 10000);
+              }, 15000);
             }
           } else {
             await setDoc(doc(db, "users", roll_no.split('@')[0]), {
@@ -46,7 +46,7 @@ function Dash(props) {
             setStatus("Claimed token at " + time  + " " + date);
             setTimeout(() => {
               setToken_vis(false);
-            }, 10000);
+            }, 15000);
           }
 
     }
