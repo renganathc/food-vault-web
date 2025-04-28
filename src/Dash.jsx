@@ -106,7 +106,7 @@ function Dash(props) {
                 <p className="token-id-text" id="token_id">{roll_no.split('@')[0]}</p>
                 <p className="expiry-text" id="time" style={{marginTop:25, marginBottom:25}}>Token expires in<br/> 15 seconds</p>
                 <p className="generated-label">Token generated on:</p>
-                <p className="generated-text" id="generated">{time} <br/> {date}</p>
+                <p className="generated-text" id="generated">{time} <br/></p>
             </div>
             </div>
         </div>
