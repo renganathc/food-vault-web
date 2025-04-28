@@ -7,11 +7,18 @@ import Dash from "./Dash";
 
 const App = () => {
   const [user, setUser] = useState(null);
+  const [os, setOS] = useState("1");
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       setUser(user);
     });
+
+    const userAgent = window.navigator.userAgent || window.navigator.vendor || window.opera;
+
+    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+      setOS("ios");
+    }
 
     return () => unsubscribe();
   }, []);
@@ -19,7 +26,7 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="*" element={user ? <Dash roll={user.email}/> : <Login />} />
+        {os == "ios" ? <Route path="*" element={user ? <Dash roll={user.email}/> : <Login />} /> : null}
       </Routes>
     </Router>
   );
