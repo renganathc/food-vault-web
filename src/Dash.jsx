@@ -56,12 +56,11 @@ function Dash(props) {
     const qrCodeScanner = new Html5QrcodeScanner("qr-reader", {fps: 10, qrbox: 250, facingMode: "environment", showTorchButton: false, showScanButton: false }, false);
 
     qrCodeScanner.render(
-      { facingMode: "environment" },
       (result) => {
         console.log(result);
-        if(result == "kamadhenu-1") {
-            generate_token();
-            qrCodeScanner.clear();
+        if (result === "kamadhenu-1") {
+          generate_token();
+          qrCodeScanner.clear();
         }
       },
       (error) => {
@@ -96,7 +95,7 @@ function Dash(props) {
         <>
         <div id="qr-reader" style={{ width: 'calc(100vw-10px)', height: 'fit-content'}}></div>
         <p>{status}</p>
-        <p style={{color: "red"}}>Token will expire withing 15 seconds of scanning. So scan only when its your turn.</p>
+        <p style={{color: "red"}}>Token will expire within 15 seconds of scanning. So scan only when its your turn.</p>
         <button onClick={logout_of_app}>logout</button>
         <div className="token-body" style={{display:(token_vis ? "" : "none")}}>
         <div className="token-card">
