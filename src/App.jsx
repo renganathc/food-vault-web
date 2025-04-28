@@ -23,10 +23,14 @@ const App = () => {
     return () => unsubscribe();
   }, []);
 
+  if (os !== "ios") {
+    return <div>Non-iOS devices are not supported</div>; // Optional: handle non-iOS case
+  }
+
   return (
     <Router>
       <Routes>
-        {os == "ios" ? <Route path="*" element={user ? <Dash roll={user.email}/> : <Login />} /> : null}
+        <Route path="*" element={user ? <Dash roll={user.email}/> : <Login />} />
       </Routes>
     </Router>
   );
