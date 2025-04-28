@@ -19,7 +19,7 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="*" element={user ? <Dash roll="524170@student.nitandhra.ac.in"/> : <Login />} />
+        <Route path="*" element={user ? <Dash roll={user.email}/> : <Login />} />
       </Routes>
     </Router>
   );
