@@ -53,7 +53,7 @@ function Dash(props) {
 
   useEffect(() => {
 
-    const qrCodeScanner = new Html5QrcodeScanner("qr-reader", {fps: 10, qrbox: 250, facingMode: "environment", showTorchButton: false, showScanButton: false }, false);
+    const qrCodeScanner = new Html5QrcodeScanner("qr-reader", {fps: 10, qrbox: 250, facingMode: "back", showTorchButton: false, showScanButton: false }, false);
 
     qrCodeScanner.render(
       (result) => {
